@@ -14,9 +14,9 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #071B31;
-      --bg2: #0c2340;
-      --bg3: #102a4c;
+      --bg: #030e14;
+      --bg2: #061820;
+      --bg3: #082030;
       --text: #E4FBFF;
       --text2: #9ecfde;
       --text3: #4e8099;
@@ -24,16 +24,15 @@
       --accent-hover: #38b4d9;
       --accent-light: rgba(78, 201, 240, 0.12);
       --border: rgba(228, 251, 255, 0.1);
-      --nav-bg: rgba(7, 27, 49, 0.96);
+      --nav-bg: rgba(3, 14, 20, 0.96);
       --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
 
-    /* ── GEOMETRIC BACKGROUND ── */
-    .geo-bg {
+        /* ── STAR FIELD BACKGROUND ── */
+    .star-canvas {
       position: fixed; inset: 0; z-index: -1;
-      pointer-events: none; overflow: hidden;
+      pointer-events: none;
     }
-    .geo-bg svg { width: 100%; height: 100%; }
 
         html { scroll-behavior: smooth; }
 
@@ -326,7 +325,7 @@
 
     /* CONTACT */
     .contact-box {
-      background: linear-gradient(135deg, #0e3e80 0%, #071B31 100%);
+      background: linear-gradient(135deg, #0a3040 0%, #030e14 100%);
       border: 1px solid rgba(78,201,240,.2);
       border-radius: 20px; padding: 60px 48px; text-align: center;
     }
@@ -355,7 +354,7 @@
 
     /* FOOTER */
     footer {
-      background: #040f1c; color: #4e8099;
+      background: #020910; color: #4e8099;
       padding: 36px 40px; text-align: center; font-size: 13px;
     }
     footer p + p { margin-top: 8px; }
@@ -389,28 +388,7 @@
 </head>
 <body>
 
-<div class="geo-bg" aria-hidden="true">
-  <svg viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-    <path d="M-60 640 L100 548 L100 364 L-60 272 L-220 364 L-220 548 Z" stroke="#4EC9F0" stroke-width="1.5" fill="none" opacity="0.07"/>
-    <path d="M1380 -80 L1540 12 L1540 196 L1380 288 L1220 196 L1220 12 Z" stroke="#4EC9F0" stroke-width="1.5" fill="none" opacity="0.06"/>
-    <path d="M1090 380 L1200 317 L1200 191 L1090 128 L980 191 L980 317 Z" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.05"/>
-    <path d="M158 118 L216 85 L216 19 L158 -14 L100 19 L100 85 Z" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.07"/>
-    <path d="M266 148 L324 115 L324 49 L266 16 L208 49 L208 115 Z" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.05"/>
-    <polygon points="680,20 820,210 540,210" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.04"/>
-    <rect x="850" y="680" width="90" height="90" transform="rotate(45 895 725)" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.06"/>
-    <rect x="290" y="760" width="60" height="60" transform="rotate(45 320 790)" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.05"/>
-    <line x1="0" y1="120" x2="180" y2="0" stroke="#4EC9F0" stroke-width="1" opacity="0.04"/>
-    <line x1="1260" y1="900" x2="1440" y2="820" stroke="#4EC9F0" stroke-width="1" opacity="0.04"/>
-    <circle cx="420" cy="420" r="2.5" fill="#4EC9F0" opacity="0.1"/>
-    <circle cx="540" cy="520" r="2" fill="#4EC9F0" opacity="0.08"/>
-    <circle cx="640" cy="360" r="2.5" fill="#4EC9F0" opacity="0.1"/>
-    <circle cx="820" cy="610" r="2" fill="#4EC9F0" opacity="0.08"/>
-    <circle cx="260" cy="560" r="2.5" fill="#4EC9F0" opacity="0.09"/>
-    <circle cx="1120" cy="680" r="2" fill="#4EC9F0" opacity="0.08"/>
-    <circle cx="960" cy="480" r="2" fill="#4EC9F0" opacity="0.07"/>
-    <circle cx="700" cy="750" r="2.5" fill="#4EC9F0" opacity="0.09"/>
-  </svg>
-</div>
+<canvas id="star-canvas" class="star-canvas" aria-hidden="true"></canvas>
 
 <!-- NAV -->
 <nav>
@@ -513,7 +491,7 @@
       <div class="about-card">
         <div class="about-card-icon">🌏</div>
         <h3>語奧國手資格</h3>
-        <p>評選前八名作品者，將授予 <strong>2027 台灣語奧一階國手資格</strong>，走向更廣闊的語言學舞台。</p>
+        <p>評選前八名作品者，將獲得 <strong>2027 台灣語奧選拔複賽參加資格</strong>，踏向更廣闊的語言學舞台。</p>
       </div>
     </div>
   </div>
@@ -765,7 +743,7 @@
       <div class="prize-card iol">
         <div class="prize-icon">🌏</div>
         <div class="prize-title">評選前八名</div>
-        <div class="prize-desc">授予 <strong>2027 台灣語奧一階國手資格</strong></div>
+        <div class="prize-desc">獲得 <strong>2027 台灣語奧選拔複賽資格</strong></div>
       </div>
     </div>
 
@@ -843,6 +821,113 @@
   window.addEventListener('scroll', () => {
     document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
   });
+</script>
+<script>
+(function(){
+  var c = document.getElementById('star-canvas');
+  var ctx = c.getContext('2d');
+
+  // Mulberry32 seeded RNG
+  function makeRng(seed) {
+    return function() {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  // Constellation: Big Dipper–inspired shape (positions as fraction of viewport)
+  var CON_STARS = [
+    [0.22, 0.30], // A - far left
+    [0.31, 0.35], // B
+    [0.38, 0.48], // C - center bright
+    [0.37, 0.56], // D - handle 1
+    [0.36, 0.63], // E - handle tip
+    [0.50, 0.38], // F - junction
+    [0.57, 0.29], // G
+    [0.63, 0.27], // H
+    [0.70, 0.31], // I - far right
+  ];
+  var CON_LINES = [
+    [0,1],[1,2],[2,3],[3,4],     // left arm + handle
+    [2,5],[5,6],[6,7],[7,8],     // right arm
+    [5,7]                         // close box
+  ];
+
+  function draw() {
+    var w = c.width  = window.innerWidth;
+    var h = c.height = window.innerHeight;
+    var rand = makeRng(2026);
+
+    // Background: near-black with teal glow upper-right
+    var bg = ctx.createRadialGradient(w*0.70, h*0.32, 0, w*0.70, h*0.32, w*0.90);
+    bg.addColorStop(0,   '#0e3540');
+    bg.addColorStop(0.28,'#082535');
+    bg.addColorStop(0.55,'#041820');
+    bg.addColorStop(1,   '#010810');
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, h);
+
+    // Tiny background stars (~450)
+    for (var i = 0; i < 450; i++) {
+      var x = rand() * w;
+      var y = rand() * h;
+      var r = rand() * 0.85 + 0.2;
+      var a = rand() * 0.55 + 0.15;
+      // subtle teal tint on right side
+      var teal = Math.max(0, x/w - 0.3) * 40;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(210,'+(220+teal|0)+','+(235+teal|0)+','+a+')';
+      ctx.fill();
+    }
+
+    // Medium stars (~70)
+    for (var j = 0; j < 70; j++) {
+      var x2 = rand() * w;
+      var y2 = rand() * h;
+      var r2 = rand() * 1.1 + 0.8;
+      var a2 = rand() * 0.45 + 0.45;
+      ctx.beginPath();
+      ctx.arc(x2, y2, r2, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(225,248,255,'+a2+')';
+      ctx.fill();
+    }
+
+    // Constellation lines
+    ctx.save();
+    ctx.strokeStyle = 'rgba(140,215,235,0.32)';
+    ctx.lineWidth = 1;
+    for (var k = 0; k < CON_LINES.length; k++) {
+      var ai = CON_LINES[k][0], bi = CON_LINES[k][1];
+      ctx.beginPath();
+      ctx.moveTo(CON_STARS[ai][0]*w, CON_STARS[ai][1]*h);
+      ctx.lineTo(CON_STARS[bi][0]*w, CON_STARS[bi][1]*h);
+      ctx.stroke();
+    }
+
+    // Constellation star glows + cores
+    for (var s = 0; s < CON_STARS.length; s++) {
+      var sx = CON_STARS[s][0]*w, sy = CON_STARS[s][1]*h;
+      var glow = ctx.createRadialGradient(sx, sy, 0, sx, sy, 10);
+      glow.addColorStop(0, 'rgba(180,240,255,0.55)');
+      glow.addColorStop(1, 'rgba(100,200,240,0)');
+      ctx.beginPath();
+      ctx.arc(sx, sy, 10, 0, Math.PI*2);
+      ctx.fillStyle = glow;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(sx, sy, 2.2, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(225,252,255,0.95)';
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  window.addEventListener('resize', draw);
+  draw();
+})();
 </script>
 </body>
 </html>
