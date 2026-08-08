@@ -13,21 +13,28 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #ffffff;
-      --bg2: #f8fafc;
-      --bg3: #eff6ff;
-      --text: #0f172a;
-      --text2: #475569;
-      --text3: #94a3b8;
-      --accent: #1d4ed8;
-      --accent-hover: #1e40af;
-      --accent-light: #dbeafe;
-      --border: #e2e8f0;
-      --nav-bg: rgba(255, 255, 255, 0.96);
-      --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.05);
+      --bg: #071B31;
+      --bg2: #0c2340;
+      --bg3: #102a4c;
+      --text: #E4FBFF;
+      --text2: #9ecfde;
+      --text3: #4e8099;
+      --accent: #4EC9F0;
+      --accent-hover: #38b4d9;
+      --accent-light: rgba(78, 201, 240, 0.12);
+      --border: rgba(228, 251, 255, 0.1);
+      --nav-bg: rgba(7, 27, 49, 0.96);
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+    /* ── GEOMETRIC BACKGROUND ── */
+    .geo-bg {
+      position: fixed; inset: 0; z-index: -1;
+      pointer-events: none; overflow: hidden;
+    }
+    .geo-bg svg { width: 100%; height: 100%; }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
       font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -75,7 +82,7 @@
     .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
     .nav-reg-btn {
       font-size: 13px; font-weight: 700; padding: 7px 18px;
-      background: var(--accent); color: white; border-radius: 8px;
+      background: var(--accent); color: #071B31; border-radius: 8px;
       text-decoration: none; transition: background .2s;
     }
     .nav-reg-btn:hover { background: var(--accent-hover); }
@@ -109,15 +116,15 @@
     /* ── HERO ── */
     .hero {
       padding: 140px 40px 90px;
-      background: linear-gradient(150deg, #f8fafc 0%, #eff6ff 45%, #f0fdf4 100%);
+      background: transparent;
       text-align: center; position: relative; overflow: hidden;
     }
     .hero::before {
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 65% 15%, rgba(219,234,254,.7) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(220,252,231,.5) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 50% at 65% 15%, rgba(78,201,240,.06) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(78,201,240,.04) 0%, transparent 60%);
     }
     .hero-inner { position: relative; max-width: 780px; margin: 0 auto; }
     .hero-badge {
@@ -148,7 +155,7 @@
     .hero-meta-item strong { color: var(--text); font-weight: 600; }
 
     .countdown-wrap {
-      background: white; border: 1px solid var(--border);
+      background: var(--bg2); border: 1px solid var(--border);
       border-radius: 16px; padding: 18px 32px;
       display: inline-block; margin-bottom: 36px;
       box-shadow: var(--shadow);
@@ -165,14 +172,14 @@
 
     .hero-ctas { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
     .cta-primary {
-      background: var(--accent); color: white;
+      background: var(--accent); color: #071B31;
       padding: 13px 32px; border-radius: 10px;
       font-size: 15px; font-weight: 700; text-decoration: none;
       transition: background .2s, transform .15s;
     }
     .cta-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
     .cta-secondary {
-      background: white; color: var(--accent);
+      background: rgba(78,201,240,.07); color: var(--accent);
       padding: 13px 32px; border-radius: 10px;
       font-size: 15px; font-weight: 700; text-decoration: none;
       border: 2px solid var(--accent-light);
@@ -202,7 +209,7 @@
     }
     .about-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .about-card {
-      background: white; border: 1px solid var(--border);
+      background: var(--bg2); border: 1px solid var(--border);
       border-radius: 14px; padding: 26px;
       box-shadow: var(--shadow);
     }
@@ -235,7 +242,7 @@
     .fee-table-wrap { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 10px; }
     .fee-table { width: 100%; border-collapse: collapse; }
     .fee-table th {
-      background: var(--accent); color: white;
+      background: var(--accent); color: #071B31;
       padding: 13px 20px; font-size: 13.5px; font-weight: 700; text-align: center;
     }
     .fee-table th:first-child { text-align: left; }
@@ -259,7 +266,7 @@
     /* FORMAT */
     .format-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
     .format-card {
-      background: white; border: 1px solid var(--border);
+      background: var(--bg2); border: 1px solid var(--border);
       border-radius: 12px; padding: 22px;
     }
     .format-card h4 {
@@ -278,13 +285,13 @@
       border-radius: 8px; padding: 12px 18px; margin-top: 20px;
       font-size: 13px; color: var(--text2);
     }
-    .format-filename code { font-family: monospace; color: var(--text); background: white; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
+    .format-filename code { font-family: monospace; color: var(--text); background: var(--bg); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
 
     /* JUDGING */
     .judging-grid { display: flex; flex-direction: column; gap: 14px; }
     .judging-item {
       display: flex; gap: 16px; align-items: flex-start;
-      background: white; border: 1px solid var(--border);
+      background: var(--bg2); border: 1px solid var(--border);
       border-radius: 12px; padding: 18px 22px;
       transition: box-shadow .2s;
     }
@@ -299,9 +306,9 @@
       flex: 1; min-width: 180px; border-radius: 14px;
       padding: 26px 22px; text-align: center; border: 2px solid transparent;
     }
-    .prize-card.gold { background: linear-gradient(135deg, #fef9c3, #fef3c7); border-color: #fbbf24; }
-    .prize-card.cert { background: linear-gradient(135deg, #f1f5f9, #e2e8f0); border-color: #94a3b8; }
-    .prize-card.iol  { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-color: #93c5fd; }
+    .prize-card.gold { background: linear-gradient(135deg, rgba(251,191,36,.13), rgba(251,191,36,.07)); border-color: rgba(251,191,36,.4); }
+    .prize-card.cert { background: linear-gradient(135deg, rgba(148,163,184,.1), rgba(148,163,184,.05)); border-color: rgba(148,163,184,.25); }
+    .prize-card.iol  { background: linear-gradient(135deg, rgba(78,201,240,.1), rgba(78,201,240,.05)); border-color: rgba(78,201,240,.3); }
     .prize-icon { font-size: 36px; margin-bottom: 12px; }
     .prize-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
     .prize-desc { font-size: 13px; color: var(--text2); line-height: 1.65; }
@@ -317,7 +324,8 @@
 
     /* CONTACT */
     .contact-box {
-      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+      background: linear-gradient(135deg, #0e3e80 0%, #071B31 100%);
+      border: 1px solid rgba(78,201,240,.2);
       border-radius: 20px; padding: 60px 48px; text-align: center;
     }
     .contact-box h2 {
@@ -338,24 +346,24 @@
     }
     .contact-email:hover { background: rgba(255,255,255,.25); }
     .contact-fb {
-      background: white; color: var(--accent);
-      border: 1.5px solid white;
+      background: rgba(78,201,240,.1); color: var(--accent);
+      border: 1.5px solid rgba(78,201,240,.3);
     }
     .contact-fb:hover { background: var(--accent-light); }
 
     /* FOOTER */
     footer {
-      background: #0f172a; color: #64748b;
+      background: #040f1c; color: #4e8099;
       padding: 36px 40px; text-align: center; font-size: 13px;
     }
     footer p + p { margin-top: 8px; }
-    footer a { color: #94a3b8; text-decoration: none; }
+    footer a { color: #6b9eb0; text-decoration: none; }
     footer a:hover { color: white; }
 
     /* BACK TO TOP */
     #backToTop {
       position: fixed; bottom: 28px; right: 24px; z-index: 300;
-      background: var(--accent); color: white;
+      background: var(--accent); color: #071B31;
       border: none; border-radius: 50px; padding: 10px 18px;
       font-size: 13px; font-weight: 700; cursor: pointer;
       box-shadow: 0 4px 16px rgba(29,78,216,.3);
@@ -377,6 +385,29 @@
   </style>
 </head>
 <body>
+
+<div class="geo-bg" aria-hidden="true">
+  <svg viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <path d="M-60 640 L100 548 L100 364 L-60 272 L-220 364 L-220 548 Z" stroke="#4EC9F0" stroke-width="1.5" fill="none" opacity="0.07"/>
+    <path d="M1380 -80 L1540 12 L1540 196 L1380 288 L1220 196 L1220 12 Z" stroke="#4EC9F0" stroke-width="1.5" fill="none" opacity="0.06"/>
+    <path d="M1090 380 L1200 317 L1200 191 L1090 128 L980 191 L980 317 Z" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.05"/>
+    <path d="M158 118 L216 85 L216 19 L158 -14 L100 19 L100 85 Z" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.07"/>
+    <path d="M266 148 L324 115 L324 49 L266 16 L208 49 L208 115 Z" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.05"/>
+    <polygon points="680,20 820,210 540,210" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.04"/>
+    <rect x="850" y="680" width="90" height="90" transform="rotate(45 895 725)" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.06"/>
+    <rect x="290" y="760" width="60" height="60" transform="rotate(45 320 790)" stroke="#4EC9F0" stroke-width="1" fill="none" opacity="0.05"/>
+    <line x1="0" y1="120" x2="180" y2="0" stroke="#4EC9F0" stroke-width="1" opacity="0.04"/>
+    <line x1="1260" y1="900" x2="1440" y2="820" stroke="#4EC9F0" stroke-width="1" opacity="0.04"/>
+    <circle cx="420" cy="420" r="2.5" fill="#4EC9F0" opacity="0.1"/>
+    <circle cx="540" cy="520" r="2" fill="#4EC9F0" opacity="0.08"/>
+    <circle cx="640" cy="360" r="2.5" fill="#4EC9F0" opacity="0.1"/>
+    <circle cx="820" cy="610" r="2" fill="#4EC9F0" opacity="0.08"/>
+    <circle cx="260" cy="560" r="2.5" fill="#4EC9F0" opacity="0.09"/>
+    <circle cx="1120" cy="680" r="2" fill="#4EC9F0" opacity="0.08"/>
+    <circle cx="960" cy="480" r="2" fill="#4EC9F0" opacity="0.07"/>
+    <circle cx="700" cy="750" r="2.5" fill="#4EC9F0" opacity="0.09"/>
+  </svg>
+</div>
 
 <!-- NAV -->
 <nav>
