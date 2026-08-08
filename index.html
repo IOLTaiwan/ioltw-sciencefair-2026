@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="2026第五屆臺灣中學生語言科學科展，歡迎全國中學生以語言科學研究參加，2026年10月31日於國立高雄師範大學舉辦。" />
+  <meta property="og:title" content="第五屆臺灣中學生語言科學科展 2026" />
+  <meta property="og:description" content="探索語言的奧秘，以科學與創意呈現你的語言研究。2026年10月31日，國立高雄師範大學。" />
+  <title>第五屆臺灣中學生語言科學科展 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --bg2: #f8fafc;
+      --bg3: #eff6ff;
+      --text: #0f172a;
+      --text2: #475569;
+      --text3: #94a3b8;
+      --accent: #1d4ed8;
+      --accent-hover: #1e40af;
+      --accent-light: #dbeafe;
+      --border: #e2e8f0;
+      --nav-bg: rgba(255, 255, 255, 0.96);
+      --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.05);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: 60px;
+      display: flex; align-items: center;
+      padding: 0 40px;
+    }
+    .nav-inner {
+      max-width: 1100px; width: 100%; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 14px; font-weight: 700;
+      color: var(--accent); text-decoration: none;
+      letter-spacing: .02em; white-space: nowrap;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 28px; list-style: none;
+    }
+    .nav-links a {
+      font-size: 13.5px; font-weight: 500; color: var(--text2);
+      text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .lang-btn {
+      font-size: 12px; font-weight: 600; padding: 4px 12px;
+      border: 1.5px solid var(--border); border-radius: 20px;
+      color: var(--text2); text-decoration: none; transition: all .2s;
+    }
+    .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .nav-reg-btn {
+      font-size: 13px; font-weight: 700; padding: 7px 18px;
+      background: var(--accent); color: white; border-radius: 8px;
+      text-decoration: none; transition: background .2s;
+    }
+    .nav-reg-btn:hover { background: var(--accent-hover); }
+
+    /* mobile nav */
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: var(--text2); font-size: 22px; padding: 4px 8px; line-height: 1; }
+    .nav-mobile-right { display: none; align-items: center; gap: 8px; }
+    .nav-mobile-menu {
+      display: none; flex-direction: column; gap: 2px;
+      position: fixed; top: 60px; left: 0; right: 0; z-index: 195;
+      background: var(--nav-bg); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px 18px;
+    }
+    .nav-mobile-menu.open { display: flex; }
+    .nav-mobile-menu a {
+      font-size: 15px; font-weight: 500; color: var(--text2);
+      text-decoration: none; padding: 10px 14px; border-radius: 8px;
+      transition: color .2s, background .2s;
+    }
+    .nav-mobile-menu a:hover { color: var(--accent); background: var(--accent-light); }
+    .nav-mobile-menu .nav-reg-btn { margin-top: 8px; text-align: center; }
+
+    @media (max-width: 760px) {
+      nav { padding: 0 20px; }
+      .nav-links, .nav-right { display: none; }
+      .nav-mobile-right { display: flex; }
+      .nav-toggle { display: block; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 140px 40px 90px;
+      background: linear-gradient(150deg, #f8fafc 0%, #eff6ff 45%, #f0fdf4 100%);
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 65% 15%, rgba(219,234,254,.7) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(220,252,231,.5) 0%, transparent 60%);
+    }
+    .hero-inner { position: relative; max-width: 780px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-light); color: var(--accent);
+      font-size: 11.5px; font-weight: 700; letter-spacing: .12em;
+      padding: 5px 16px; border-radius: 20px; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(30px, 5.5vw, 50px);
+      font-weight: 700; line-height: 1.25;
+      color: var(--text); margin-bottom: 18px;
+    }
+    .hero-sub {
+      font-size: 16px; color: var(--text2);
+      margin-bottom: 36px; line-height: 1.9;
+    }
+    .hero-meta {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 12px 28px; margin-bottom: 40px;
+    }
+    .hero-meta-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 13.5px; color: var(--text2);
+    }
+    .hero-meta-item strong { color: var(--text); font-weight: 600; }
+
+    .countdown-wrap {
+      background: white; border: 1px solid var(--border);
+      border-radius: 16px; padding: 18px 32px;
+      display: inline-block; margin-bottom: 36px;
+      box-shadow: var(--shadow);
+    }
+    .cd-label { font-size: 11px; color: var(--text3); letter-spacing: .1em; margin-bottom: 12px; text-transform: uppercase; }
+    .cd-boxes { display: flex; gap: 12px; align-items: center; justify-content: center; }
+    .cd-box { text-align: center; min-width: 52px; }
+    .cd-num {
+      font-family: 'Noto Serif TC', serif; font-size: 34px;
+      font-weight: 700; color: var(--accent); line-height: 1;
+    }
+    .cd-unit { font-size: 11px; color: var(--text3); margin-top: 4px; letter-spacing: .06em; }
+    .cd-sep { font-size: 28px; color: var(--border); padding-bottom: 16px; }
+
+    .hero-ctas { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .cta-primary {
+      background: var(--accent); color: white;
+      padding: 13px 32px; border-radius: 10px;
+      font-size: 15px; font-weight: 700; text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .cta-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .cta-secondary {
+      background: white; color: var(--accent);
+      padding: 13px 32px; border-radius: 10px;
+      font-size: 15px; font-weight: 700; text-decoration: none;
+      border: 2px solid var(--accent-light);
+      transition: border-color .2s, transform .15s;
+    }
+    .cta-secondary:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 40px; }
+    .section-bg2 { background: var(--bg2); }
+    .container { max-width: 1000px; margin: 0 auto; }
+    .section-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: .15em;
+      color: var(--accent); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(22px, 4vw, 30px); font-weight: 700;
+      color: var(--text); margin-bottom: 10px;
+    }
+    .section-desc { font-size: 14.5px; color: var(--text2); margin-bottom: 40px; }
+
+    /* ABOUT */
+    .about-text {
+      font-size: 15px; color: var(--text2); line-height: 2;
+      max-width: 800px; margin-bottom: 36px;
+    }
+    .about-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .about-card {
+      background: white; border: 1px solid var(--border);
+      border-radius: 14px; padding: 26px;
+      box-shadow: var(--shadow);
+    }
+    .about-card-icon { font-size: 26px; margin-bottom: 12px; }
+    .about-card h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px;
+    }
+    .about-card p { font-size: 13.5px; color: var(--text2); line-height: 1.9; }
+
+    /* TIMELINE */
+    .timeline { position: relative; padding-left: 0; }
+    .tl-item { display: flex; gap: 20px; margin-bottom: 28px; position: relative; }
+    .tl-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 40px; }
+    .tl-dot {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: white; border: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: var(--text3); flex-shrink: 0; z-index: 1;
+    }
+    .tl-dot.active { background: var(--accent); border-color: var(--accent); color: white; }
+    .tl-dot.done { background: var(--bg2); border-color: var(--text3); color: var(--text3); }
+    .tl-line { flex: 1; width: 2px; background: var(--border); margin: 4px 0; }
+    .tl-content { flex: 1; padding-top: 6px; padding-bottom: 20px; }
+    .tl-date { font-size: 11.5px; font-weight: 700; color: var(--accent); letter-spacing: .05em; margin-bottom: 4px; }
+    .tl-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .tl-desc { font-size: 13.5px; color: var(--text2); line-height: 1.8; }
+    .tl-desc a { color: var(--accent); text-decoration: none; }
+    .tl-desc a:hover { text-decoration: underline; }
+
+    /* REGISTRATION */
+    .fee-table-wrap { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 10px; }
+    .fee-table { width: 100%; border-collapse: collapse; }
+    .fee-table th {
+      background: var(--accent); color: white;
+      padding: 13px 20px; font-size: 13.5px; font-weight: 700; text-align: center;
+    }
+    .fee-table th:first-child { text-align: left; }
+    .fee-table td { padding: 13px 20px; font-size: 14px; border-bottom: 1px solid var(--border); }
+    .fee-table tr:last-child td { border-bottom: none; }
+    .fee-table td:not(:first-child) { text-align: center; font-weight: 600; }
+    .fee-table tbody tr:nth-child(even) td { background: var(--bg2); }
+    .fee-note { font-size: 13px; color: var(--text2); margin-bottom: 28px; }
+    .fee-note a { color: var(--accent); }
+
+    .bank-box {
+      background: var(--bg3); border: 1px solid var(--accent-light);
+      border-radius: 14px; padding: 24px 28px;
+    }
+    .bank-box h4 { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 16px; }
+    .bank-row { display: flex; gap: 12px; margin-bottom: 10px; font-size: 13.5px; }
+    .bank-label { color: var(--text3); width: 80px; flex-shrink: 0; }
+    .bank-val { color: var(--text); font-weight: 600; }
+    .bank-note { font-size: 12.5px; color: var(--accent); margin-top: 12px; font-weight: 600; }
+
+    /* FORMAT */
+    .format-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .format-card {
+      background: white; border: 1px solid var(--border);
+      border-radius: 12px; padding: 22px;
+    }
+    .format-card h4 {
+      font-size: 13.5px; font-weight: 700; color: var(--accent);
+      margin-bottom: 14px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--accent-light);
+    }
+    .format-card ul { list-style: none; }
+    .format-card li {
+      font-size: 13.5px; color: var(--text2); line-height: 1.8;
+      padding: 3px 0 3px 16px; position: relative;
+    }
+    .format-card li::before { content: '·'; position: absolute; left: 0; color: var(--accent); font-weight: 900; }
+    .format-filename {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 18px; margin-top: 20px;
+      font-size: 13px; color: var(--text2);
+    }
+    .format-filename code { font-family: monospace; color: var(--text); background: white; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
+
+    /* JUDGING */
+    .judging-grid { display: flex; flex-direction: column; gap: 14px; }
+    .judging-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: white; border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px;
+      transition: box-shadow .2s;
+    }
+    .judging-item:hover { box-shadow: var(--shadow); }
+    .judging-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .judging-item h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .judging-item p { font-size: 13.5px; color: var(--text2); line-height: 1.75; }
+
+    /* PRIZES & FINALS */
+    .prizes-row { display: flex; gap: 18px; margin-bottom: 36px; flex-wrap: wrap; }
+    .prize-card {
+      flex: 1; min-width: 180px; border-radius: 14px;
+      padding: 26px 22px; text-align: center; border: 2px solid transparent;
+    }
+    .prize-card.gold { background: linear-gradient(135deg, #fef9c3, #fef3c7); border-color: #fbbf24; }
+    .prize-card.cert { background: linear-gradient(135deg, #f1f5f9, #e2e8f0); border-color: #94a3b8; }
+    .prize-card.iol { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-color: #93c5fd; }
+    .prize-icon { font-size: 36px; margin-bottom: 12px; }
+    .prize-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .prize-desc { font-size: 13px; color: var(--text2); line-height: 1.65; }
+
+    .poster-box {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px 28px;
+    }
+    .poster-box h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+    .poster-row { display: flex; gap: 12px; margin-bottom: 10px; font-size: 13.5px; }
+    .poster-label { color: var(--text3); width: 80px; flex-shrink: 0; }
+    .poster-val { color: var(--text2); line-height: 1.7; }
+
+    /* CONTACT */
+    .contact-box {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+      border-radius: 20px; padding: 60px 48px; text-align: center;
+    }
+    .contact-box h2 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 28px; font-weight: 700; color: white; margin-bottom: 12px;
+    }
+    .contact-box p { font-size: 15px; color: rgba(255,255,255,.8); margin-bottom: 28px; line-height: 1.8; }
+    .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .contact-email, .contact-fb {
+      display: inline-block;
+      border-radius: 10px; padding: 12px 24px;
+      font-size: 14.5px; font-weight: 600; text-decoration: none;
+      transition: background .2s;
+    }
+    .contact-email {
+      background: rgba(255,255,255,.15); color: white;
+      border: 1.5px solid rgba(255,255,255,.35);
+    }
+    .contact-email:hover { background: rgba(255,255,255,.25); }
+    .contact-fb {
+      background: white; color: var(--accent);
+      border: 1.5px solid white;
+    }
+    .contact-fb:hover { background: var(--accent-light); }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a; color: #64748b;
+      padding: 36px 40px; text-align: center; font-size: 13px;
+    }
+    footer p + p { margin-top: 8px; }
+    footer a { color: #94a3b8; text-decoration: none; }
+    footer a:hover { color: white; }
+
+    /* BACK TO TOP */
+    #backToTop {
+      position: fixed; bottom: 28px; right: 24px; z-index: 300;
+      background: var(--accent); color: white;
+      border: none; border-radius: 50px; padding: 10px 18px;
+      font-size: 13px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(29,78,216,.3);
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s, transform .3s;
+    }
+    #backToTop.visible { opacity: 1; pointer-events: auto; }
+    #backToTop:hover { transform: translateY(-2px); }
+
+    /* RESPONSIVE */
+    @media (max-width: 680px) {
+      section { padding: 60px 20px; }
+      .hero { padding: 100px 20px 60px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .format-grid { grid-template-columns: 1fr; }
+      .prizes-row { flex-direction: column; }
+      .contact-box { padding: 40px 24px; }
+      footer { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">🔬 語言科學科展 2026</a>
+    <ul class="nav-links">
+      <li><a href="#about">關於</a></li>
+      <li><a href="#timeline">時程</a></li>
+      <li><a href="#registration">報名</a></li>
+      <li><a href="#format">論文規範</a></li>
+      <li><a href="#judging">評審</a></li>
+      <li><a href="#prizes">獎項</a></li>
+      <li><a href="#contact">聯絡</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="en.html" class="lang-btn">EN</a>
+      <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="nav-reg-btn">立即報名</a>
+    </div>
+    <div class="nav-mobile-right">
+      <a href="en.html" class="lang-btn">EN</a>
+      <button class="nav-toggle" id="navToggle" aria-label="開啟選單">☰</button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="#about">關於</a>
+  <a href="#timeline">時程</a>
+  <a href="#registration">報名</a>
+  <a href="#format">論文規範</a>
+  <a href="#judging">評審</a>
+  <a href="#prizes">獎項</a>
+  <a href="#contact">聯絡</a>
+  <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="nav-reg-btn">立即報名</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">2026 · 第五屆</div>
+    <h1>臺灣中學生<br>語言科學科展</h1>
+    <p class="hero-sub">探索語言的奧秘，以科學與創意呈現你的語言研究<br>只要是跟語言有關、有創意的主題，都非常歡迎你來參加！</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">📅 <strong>2026 年 10 月 31 日（六）</strong></div>
+      <div class="hero-meta-item">📍 <strong>國立高雄師範大學和平校區</strong></div>
+      <div class="hero-meta-item">🏛 <strong>台灣語奧 × 台大語言所 × 台灣語言學學會</strong></div>
+    </div>
+    <div class="countdown-wrap">
+      <div class="cd-label">投稿報名截止倒數 — 2026 年 9 月 7 日</div>
+      <div class="cd-boxes">
+        <div class="cd-box">
+          <div class="cd-num" id="cd-days">--</div>
+          <div class="cd-unit">天</div>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box">
+          <div class="cd-num" id="cd-hours">--</div>
+          <div class="cd-unit">時</div>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box">
+          <div class="cd-num" id="cd-mins">--</div>
+          <div class="cd-unit">分</div>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box">
+          <div class="cd-num" id="cd-secs">--</div>
+          <div class="cd-unit">秒</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="cta-primary">立即報名</a>
+      <a href="#about" class="cta-secondary">了解更多</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-tag">About</div>
+    <h2 class="section-title">活動宗旨</h2>
+    <p class="about-text">語言，是人類很神奇的一項能力。因著語言，我們可以理解彼此、共情甘苦；因著語言，我們能夠記錄歷史、講述故事；因著語言，我們得以推進科技、創造文明。語言研究融合自然科學的邏輯分析能力，與共感他人的人文關懷省思，呈現跨領域的繽紛元素與多元樣貌。</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-card-icon">🔬</div>
+        <h3>科學探究精神</h3>
+        <p>以科學與創意的方式，探索生活中的語言現象，提出屬於自己的研究問題，親身體驗語言研究的樂趣。</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">📝</div>
+        <h3>小論文 × 海報發表</h3>
+        <p>透過小論文與海報發表，和其他同學分享你的發現。任何跟語言有關、有創意的主題都非常歡迎！</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">🎓</div>
+        <h3>參賽資格</h3>
+        <p>全國各級中學在學生（含外僑學校與自學生），得以個人方式或團體方式（至多 3 人，不限同校同年級）參賽。</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">🌏</div>
+        <h3>語奧國手資格</h3>
+        <p>評選前八名作品者，將授予 <strong>2027 台灣語奧一階國手資格</strong>，走向更廣闊的語言學舞台。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="section-bg2">
+  <div class="container">
+    <div class="section-tag">Schedule</div>
+    <h2 class="section-title">活動時程</h2>
+    <p class="section-desc">從報名到決選的完整流程</p>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-dot active">1</div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-date">即日起 — 2026 年 9 月 7 日（一）23:59</div>
+          <div class="tl-title">投稿意願報名 ＋ 初選繳費</div>
+          <div class="tl-desc">完成線上報名表單，並繳納初選費用。<br>
+            <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener">→ 前往報名連結</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-dot">2</div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-date">2026 年 9 月 21 日（一）23:59</div>
+          <div class="tl-title">論文投稿截止</div>
+          <div class="tl-desc">完成正式論文 PDF 上傳。<br>
+            <a href="https://forms.gle/dK7pkTFesyR8aph67" target="_blank" rel="noopener">→ 前往論文投稿連結</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-dot">3</div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-date">2026 年 10 月 7 日（三）</div>
+          <div class="tl-title">決選名單公告</div>
+          <div class="tl-desc">以 email 及 Facebook 粉專通知決選入選結果。</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-dot">4</div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-date">2026 年 10 月 12 日（一）</div>
+          <div class="tl-title">決選意願報名 ＋ 決選繳費</div>
+          <div class="tl-desc">入選者填寫決選報名表，並完成決選費用繳納。</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-dot">5</div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-date">2026 年 10 月 31 日（六）</div>
+          <div class="tl-title">🎉 決選暨海報發表</div>
+          <div class="tl-desc">於<strong>國立高雄師範大學和平校區</strong>，台灣語言學學會年度大會現場進行海報展演、簡報發表與問答互動。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION -->
+<section id="registration">
+  <div class="container">
+    <div class="section-tag">Registration</div>
+    <h2 class="section-title">報名方式與費用</h2>
+    <p class="section-desc">採線上報名，填寫表單並上傳匯款證明。</p>
+
+    <div class="fee-table-wrap">
+      <table class="fee-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>非偏鄉生</th>
+            <th>偏鄉生 ＊</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>初選（含初選評審老師費用）</td>
+            <td>NTD 800 元 / 人</td>
+            <td>NTD 600 元 / 人</td>
+          </tr>
+          <tr>
+            <td>決選（含決選評審老師及場地費用）</td>
+            <td>NTD 1,200 元 / 人</td>
+            <td>NTD 900 元 / 人</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fee-note">＊ 偏鄉生認定請依據 <a href="https://drive.google.com/file/d/1Rpd78i4inIS4Unt6T71RKfp0yrrAnxoE/view" target="_blank" rel="noopener">偏鄉地區一覽表</a>，範圍涵蓋表中列示地區，以及花蓮、臺東與離島地區。</p>
+
+    <div class="bank-box">
+      <h4>💳 匯款資訊</h4>
+      <div class="bank-row"><span class="bank-label">銀行代號</span><span class="bank-val">808 玉山銀行</span></div>
+      <div class="bank-row"><span class="bank-label">分行</span><span class="bank-val">台大分行</span></div>
+      <div class="bank-row"><span class="bank-label">帳號</span><span class="bank-val">0624-940-151025</span></div>
+      <div class="bank-row"><span class="bank-label">戶名</span><span class="bank-val">台灣語言文化與資訊協會</span></div>
+      <p class="bank-note">⚠ 請保留匯款證明，報名時連同表單上傳！</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAT -->
+<section id="format" class="section-bg2">
+  <div class="container">
+    <div class="section-tag">Paper Format</div>
+    <h2 class="section-title">論文格式規範</h2>
+    <p class="section-desc">請確認論文符合以下格式要求再行投稿。</p>
+    <div class="format-grid">
+      <div class="format-card">
+        <h4>基本規定</h4>
+        <ul>
+          <li>語言：中英文皆可</li>
+          <li>紙張：A4 紙張繕打</li>
+          <li>中文篇幅：6 頁為限（含附錄，不含封面）</li>
+          <li>英文篇幅：9 頁為限（含附錄，不含封面）</li>
+        </ul>
+      </div>
+      <div class="format-card">
+        <h4>字體與排版</h4>
+        <ul>
+          <li>中文字體：標楷體</li>
+          <li>英文字體：Times New Roman</li>
+          <li>標題：14 pt</li>
+          <li>內文：12 pt，1.5 倍行距</li>
+          <li>邊界：2.54 cm（四邊）</li>
+        </ul>
+      </div>
+      <div class="format-card">
+        <h4>封面（獨立一頁）</h4>
+        <ul>
+          <li>題目</li>
+          <li>參賽者姓名</li>
+          <li>學校及年級</li>
+          <li>指導老師姓名</li>
+        </ul>
+      </div>
+      <div class="format-card">
+        <h4>論文架構（依序）</h4>
+        <ul>
+          <li>前言 Introduction</li>
+          <li>文獻探討 Literature Review</li>
+          <li>研究方法 Method</li>
+          <li>結果與分析 Results and Analyses</li>
+          <li>結論 Conclusion</li>
+          <li>參考文獻 References（APA 格式）</li>
+          <li>附錄 Appendices</li>
+        </ul>
+      </div>
+    </div>
+    <div class="format-filename">
+      📁 <strong>檔名格式：</strong>「作品標題_作者姓名.pdf」<br>
+      範例：<code>探究火星人的語言_陳采潔_林承恩_黃沛恩.pdf</code>
+    </div>
+  </div>
+</section>
+
+<!-- JUDGING -->
+<section id="judging">
+  <div class="container">
+    <div class="section-tag">Judging Criteria</div>
+    <h2 class="section-title">評審標準</h2>
+    <p class="section-desc">評審將就以下六個面向綜合評分</p>
+    <div class="judging-grid">
+      <div class="judging-item">
+        <div class="judging-icon">💡</div>
+        <div>
+          <h4>研究主題</h4>
+          <p>與語言科學相關，且具原創性</p>
+        </div>
+      </div>
+      <div class="judging-item">
+        <div class="judging-icon">📖</div>
+        <div>
+          <h4>前言</h4>
+          <p>明確說明研究背景、動機、目的與研究問題</p>
+        </div>
+      </div>
+      <div class="judging-item">
+        <div class="judging-icon">📚</div>
+        <div>
+          <h4>文獻探討</h4>
+          <p>客觀清楚，且適切引用相關文獻</p>
+        </div>
+      </div>
+      <div class="judging-item">
+        <div class="judging-icon">🧪</div>
+        <div>
+          <h4>研究方法</h4>
+          <p>清楚說明資料蒐集方式</p>
+        </div>
+      </div>
+      <div class="judging-item">
+        <div class="judging-icon">📊</div>
+        <div>
+          <h4>結果與分析</h4>
+          <p>合理、完整且具邏輯性；圖表繪製正確，結果闡釋合宜</p>
+        </div>
+      </div>
+      <div class="judging-item">
+        <div class="judging-icon">✅</div>
+        <div>
+          <h4>結論與參考文獻</h4>
+          <p>結論回應研究問題且具啟發性；參考文獻符合 APA 格式，完整無缺漏</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIZES -->
+<section id="prizes" class="section-bg2">
+  <div class="container">
+    <div class="section-tag">Prizes &amp; Finals</div>
+    <h2 class="section-title">競賽流程與獎項</h2>
+    <p class="section-desc">所有投稿作品經初選後，優秀作品將受邀進入決選，於大會現場進行海報發表與問答</p>
+    <div class="prizes-row">
+      <div class="prize-card gold">
+        <div class="prize-icon">🥇</div>
+        <div class="prize-title">評選前三名</div>
+        <div class="prize-desc">獲頒<strong>獎牌</strong>一枚</div>
+      </div>
+      <div class="prize-card cert">
+        <div class="prize-icon">📜</div>
+        <div class="prize-title">所有決選參賽者</div>
+        <div class="prize-desc">獲頒<strong>決選入選證書</strong></div>
+      </div>
+      <div class="prize-card iol">
+        <div class="prize-icon">🌏</div>
+        <div class="prize-title">評選前八名</div>
+        <div class="prize-desc">授予 <strong>2027 台灣語奧一階國手資格</strong></div>
+      </div>
+    </div>
+
+    <div class="poster-box">
+      <h4>📋 決選海報規範</h4>
+      <div class="poster-row"><span class="poster-label">尺寸</span><span class="poster-val">直式 A0，118.9 cm（長）× 84.1 cm（寬）一張</span></div>
+      <div class="poster-row"><span class="poster-label">底色</span><span class="poster-val">以淡色系為宜，圖表須以好解析度呈現</span></div>
+      <div class="poster-row"><span class="poster-label">標題列</span><span class="poster-val">須含「第五屆台灣中學生語言科學科展」名稱、題目（40–80字）、作者姓名（30–40字）、就讀學校（30–40字）</span></div>
+      <div class="poster-row"><span class="poster-label">內文結構</span><span class="poster-val">摘要 → 研究目的 → 研究方法 → 結果與討論 → 結論與建議 → 簡要文獻</span></div>
+      <div class="poster-row"><span class="poster-label">製作方式</span><span class="poster-val">發表者依格式自行製作並輸出，於研討會當天攜帶張貼</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2>聯絡我們</h2>
+      <p>有任何問題，歡迎來信詢問<br>更多資訊請關注台灣語奧 Facebook 粉專與官網公告</p>
+      <div class="contact-links">
+        <a href="mailto:ioltwtwiol@gmail.com" class="contact-email">✉️ ioltwtwiol@gmail.com</a>
+        <a href="https://www.facebook.com/ioltaiwan" target="_blank" rel="noopener" class="contact-fb">Facebook 粉專</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 台灣語言學奧林匹亞團隊 × 台大語言所 × 台灣語言學學會</p>
+  <p>高雄市苓雅區同慶里和平一路 116 號，國立高雄師範大學和平校區</p>
+  <p style="margin-top:12px;"><a href="en.html">English Version</a></p>
+</footer>
+
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</button>
+
+<script>
+  // Countdown
+  function updateCountdown() {
+    const deadline = new Date('2026-09-07T23:59:00+08:00');
+    const now = new Date();
+    const diff = deadline - now;
+    if (diff <= 0) {
+      document.querySelector('.countdown-wrap').innerHTML = '<div style="color:#94a3b8;font-size:14px;padding:8px 0;">報名已截止</div>';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const navMobileMenu = document.getElementById('navMobileMenu');
+  navToggle.addEventListener('click', () => {
+    navMobileMenu.classList.toggle('open');
+    navToggle.textContent = navMobileMenu.classList.contains('open') ? '✕' : '☰';
+  });
+  navMobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navMobileMenu.classList.remove('open');
+      navToggle.textContent = '☰';
+    });
+  });
+
+  // Back to top
+  window.addEventListener('scroll', () => {
+    document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
+  });
+</script>
+</body>
+</html>
