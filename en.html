@@ -384,21 +384,15 @@
 
     /* ── TIMELINE BUTTONS ── */
     .tl-btn {
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-block;
       margin-top: 12px;
-      padding: 10px 22px;
-      background: var(--accent); color: #dc2626;
-      font-size: 14px; font-weight: 700;
-      border-radius: 8px; text-decoration: none;
-      transition: background .2s, transform .15s, box-shadow .2s;
-      box-shadow: 0 0 18px rgba(78,201,240,.35);
+      padding: 13px 32px;
+      background: var(--accent); color: #071B31;
+      font-size: 15px; font-weight: 700;
+      border-radius: 10px; text-decoration: none;
+      transition: background .2s, transform .15s;
     }
-    .tl-btn:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 0 28px rgba(78,201,240,.55);
-    }
-    .tl-btn svg { flex-shrink: 0; }
+    .tl-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
   </style>
 </head>
 <body>
@@ -529,10 +523,7 @@
           <div class="tl-date">Now — September 7, 2026 (Mon), 23:59</div>
           <div class="tl-title">Registration &amp; Preliminary Fee Payment</div>
           <div class="tl-desc">Complete the online registration form and pay the preliminary round fee.<br>
-            <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="tl-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              Register Now
-            </a>
+            <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="tl-btn">Register Now</a>
           </div>
         </div>
       </div>
@@ -546,10 +537,7 @@
           <div class="tl-date">September 21, 2026 (Mon), 23:59</div>
           <div class="tl-title">Paper Submission Deadline</div>
           <div class="tl-desc">Upload your full research paper (PDF).<br>
-            <a href="https://forms.gle/dK7pkTFesyR8aph67" target="_blank" rel="noopener" class="tl-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              Submit Paper
-            </a>
+            <a href="https://forms.gle/dK7pkTFesyR8aph67" target="_blank" rel="noopener" class="tl-btn">Submit Paper</a>
           </div>
         </div>
       </div>
