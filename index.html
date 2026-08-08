@@ -384,6 +384,24 @@
       .contact-box { padding: 40px 24px; }
       footer { padding: 28px 20px; }
     }
+
+    /* ── TIMELINE BUTTONS ── */
+    .tl-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 12px;
+      padding: 10px 22px;
+      background: var(--accent); color: #030e14;
+      font-size: 14px; font-weight: 700;
+      border-radius: 8px; text-decoration: none;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 0 18px rgba(78,201,240,.35);
+    }
+    .tl-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 0 28px rgba(78,201,240,.55);
+    }
+    .tl-btn svg { flex-shrink: 0; }
   </style>
 </head>
 <body>
@@ -514,7 +532,10 @@
           <div class="tl-date">即日起 — 2026 年 9 月 7 日（一）23:59</div>
           <div class="tl-title">投稿意願報名 ＋ 初選繳費</div>
           <div class="tl-desc">完成線上報名表單，並繳納初選費用。<br>
-            <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener">→ 前往報名連結</a>
+            <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="tl-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              立即報名
+            </a>
           </div>
         </div>
       </div>
@@ -528,7 +549,10 @@
           <div class="tl-date">2026 年 9 月 21 日（一）23:59</div>
           <div class="tl-title">論文投稿截止</div>
           <div class="tl-desc">完成正式論文 PDF 上傳。<br>
-            <a href="https://forms.gle/dK7pkTFesyR8aph67" target="_blank" rel="noopener">→ 前往論文投稿連結</a>
+            <a href="https://forms.gle/dK7pkTFesyR8aph67" target="_blank" rel="noopener" class="tl-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              前往論文投稿
+            </a>
           </div>
         </div>
       </div>
