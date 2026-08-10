@@ -374,6 +374,36 @@
     #backToTop.visible { opacity: 1; pointer-events: auto; }
     #backToTop:hover { transform: translateY(-2px); }
 
+    /* PAST EDITIONS */
+    .past-edition-banner {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 20px 28px; margin-bottom: 32px;
+      gap: 20px; flex-wrap: wrap;
+    }
+    .past-edition-banner-left { display: flex; align-items: center; gap: 14px; }
+    .past-edition-num { font-size: 28px; font-weight: 700; color: var(--accent); font-family: 'Noto Serif TC', serif; }
+    .past-edition-info h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .past-edition-info p { font-size: 13px; color: var(--text2); }
+    .past-edition-link {
+      font-size: 13px; font-weight: 600; color: var(--accent);
+      text-decoration: none; border: 1.5px solid var(--accent); border-radius: 8px;
+      padding: 7px 18px; white-space: nowrap; transition: background .2s;
+    }
+    .past-edition-link:hover { background: var(--accent-light); }
+    .past-works-list { display: flex; flex-direction: column; gap: 10px; }
+    .past-work-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 18px;
+    }
+    .past-work-num { font-size: 13px; font-weight: 700; color: var(--accent); min-width: 24px; padding-top: 2px; }
+    .past-work-info { flex: 1; }
+    .past-work-title { font-size: 13.5px; color: var(--text); font-weight: 600; line-height: 1.55; margin-bottom: 4px; }
+    .past-work-author { font-size: 12.5px; color: var(--text2); }
+    .past-work-title a { color: var(--accent); text-decoration: none; }
+    .past-work-title a:hover { text-decoration: underline; }
+
     /* RESPONSIVE */
     @media (max-width: 680px) {
       section { padding: 60px 20px; }
@@ -394,7 +424,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">🔬 語言科學科展 2026</a>
+    <a href="#" class="nav-logo">2026SU06 第五屆臺灣中學生語言科學科展</a>
     <ul class="nav-links">
       <li><a href="#about">關於</a></li>
       <li><a href="#timeline">時程</a></li>
@@ -403,6 +433,7 @@
       <li><a href="#judging">評審</a></li>
       <li><a href="#prizes">獎項</a></li>
       <li><a href="#contact">聯絡</a></li>
+      <li><a href="#past">往屆科展</a></li>
     </ul>
     <div class="nav-right">
       <a href="en.html" class="lang-btn">EN</a>
@@ -422,6 +453,7 @@
   <a href="#judging">評審</a>
   <a href="#prizes">獎項</a>
   <a href="#contact">聯絡</a>
+  <a href="#past">往屆科展</a>
   <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="nav-reg-btn">立即報名</a>
 </div>
 
@@ -433,7 +465,7 @@
     <p class="hero-sub">探索語言的奧秘，以科學與創意呈現你的語言研究<br>只要是跟語言有關、有創意的主題，都非常歡迎你來參加！</p>
     <div class="hero-meta">
       <div class="hero-meta-item">📅 <strong>2026 年 10 月 31 日（六）</strong></div>
-      <div class="hero-meta-item">📍 <strong>國立高雄師範大學和平校區</strong></div>
+      <div class="hero-meta-item">📍 <strong>國立高雄師範大學和平校區（暫定）</strong></div>
       <div class="hero-meta-item">🏛 <strong>台灣語奧 × 台大語言所 × 台灣語言學學會</strong></div>
     </div>
     <div class="countdown-wrap">
@@ -565,7 +597,7 @@
         <div class="tl-content">
           <div class="tl-date">2026 年 10 月 31 日（六）</div>
           <div class="tl-title">🎉 決選暨海報發表</div>
-          <div class="tl-desc">於<strong>國立高雄師範大學和平校區</strong>，台灣語言學學會年度大會現場進行海報展演、簡報發表與問答互動。</div>
+          <div class="tl-desc">於<strong>國立高雄師範大學和平校區（暫定）</strong>，台灣語言學學會年度大會現場進行海報展演、簡報發表與問答互動。</div>
         </div>
       </div>
 
@@ -752,9 +784,89 @@
       <h4>📋 決選海報規範</h4>
       <div class="poster-row"><span class="poster-label">尺寸</span><span class="poster-val">直式 A0，118.9 cm（長）× 84.1 cm（寬）一張</span></div>
       <div class="poster-row"><span class="poster-label">底色</span><span class="poster-val">以淡色系為宜，圖表須以好解析度呈現</span></div>
-      <div class="poster-row"><span class="poster-label">標題列</span><span class="poster-val">須含「第五屆台灣中學生語言科學科展」名稱、題目（40–80字）、作者姓名（30–40字）、就讀學校（30–40字）</span></div>
+      <div class="poster-row"><span class="poster-label">標題列</span><span class="poster-val">須含「第五屆台灣中學生語言科學科展」名稱、題目（40–80號字）、作者姓名（30–40號字）、就讀學校（30–40號字）</span></div>
       <div class="poster-row"><span class="poster-label">內文結構</span><span class="poster-val">摘要 → 研究目的 → 研究方法 → 結果與討論 → 結論與建議 → 簡要文獻</span></div>
       <div class="poster-row"><span class="poster-label">製作方式</span><span class="poster-val">發表者依格式自行製作並輸出，於研討會當天攜帶張貼</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAST EDITIONS -->
+<section id="past" class="section-bg2">
+  <div class="container">
+    <div class="section-tag">Previous Editions</div>
+    <h2 class="section-title">往屆科展</h2>
+    <p class="section-desc">回顧歷屆臺灣中學生語言科學科展，看看過去選手們精彩的語言學研究成果</p>
+
+    <div class="past-edition-banner">
+      <div class="past-edition-banner-left">
+        <div class="past-edition-num">第四屆</div>
+        <div class="past-edition-info">
+          <h4>2025 第四屆臺灣中學生語言科學科展</h4>
+          <p>2025 年 10 月 25 日 · 國立臺灣師範大學和平校區 II</p>
+        </div>
+      </div>
+      <a href="https://sites.google.com/view/scifair-2025/首頁" target="_blank" rel="noopener" class="past-edition-link">前往第四屆網站 →</a>
+    </div>
+
+    <h3 style="font-size:15px;font-weight:700;color:var(--text2);margin-bottom:16px;letter-spacing:.05em;">第四屆優秀作品</h3>
+    <div class="past-works-list">
+      <div class="past-work-item">
+        <div class="past-work-num">01</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1_mhQ8mfqNdmTaUCEAGGZ2LNvL84Yqf6B/view" target="_blank" rel="noopener">馬祖語否定詞研究：從語言分析、數據統計到遊戲開發</a></div>
+          <div class="past-work-author">呂乃崴 · 臺北市高級中等教育階段非學校型態實驗教育</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">02</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1kylROdjGWNYbfH_lauYXxebo9a0zA9yp/view" target="_blank" rel="noopener">The impact of non-linear language on cognitive efficiency in physics reasoning</a></div>
+          <div class="past-work-author">王宏聿 · 國立新竹科學園區實驗高級中等學校</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">03</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1voEzGnGm7BIr9Mtmp6bPVac6Nlq1GaVL/view" target="_blank" rel="noopener">The pattern between signs: The analysis of food and medicine store names in Dihua Street</a></div>
+          <div class="past-work-author">王立德 · 臺北美國學校</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">04</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1QR83inNUCc0s738weVuc7NQy3zGLJfva/view" target="_blank" rel="noopener">Tackling data scarcity: A practical framework for Amis-to-Mandarin machine translation</a></div>
+          <div class="past-work-author">林廷澔 · 新竹縣康乃薾美國學校</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">05</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1I73pGXQCJ7_X1yO0CSrTHmBllaWSPq9q/view" target="_blank" rel="noopener">Learn text vs. lived experience: Comparing human and AI understanding of language</a></div>
+          <div class="past-work-author">陳愷晞 · 臺中市立光榮國中</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">06</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1MmSHd_FBrKHyEIf6MS4TTV5i_BQl37hZ/view" target="_blank" rel="noopener">The pragmatic effects of degree adverbs in Mandarin Chinese: A study on perceived sincerity and emotional response</a></div>
+          <div class="past-work-author">黃姵穎 & 陳閲夏 · 康橋國際學校秀岡校區 & 臺北市立松山高中</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">07</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1Kg3lygvy8b35sZhVOJyJCcBZz5nhRe3J/view" target="_blank" rel="noopener">The method of loci in multimodal linguistics: Enhancing memories through spatial and gestural cues</a></div>
+          <div class="past-work-author">郭宇軒 · 新竹縣康乃薾美國學校</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">08</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1b-sASnjWJhXITOyjwH1V0Ll8mrbVs8kB/view" target="_blank" rel="noopener">「你很gay」: How Taiwanese teens evaluate and reinterpret a global slang term</a></div>
+          <div class="past-work-author">吳柏劭 · 臺北市私立復興實驗高級中學</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -776,7 +888,7 @@
 <!-- FOOTER -->
 <footer>
   <p>© 2026 台灣語言學奧林匹亞團隊 × 台大語言所 × 台灣語言學學會</p>
-  <p>高雄市苓雅區同慶里和平一路 116 號，國立高雄師範大學和平校區</p>
+  <p>高雄市苓雅區同慶里和平一路 116 號，國立高雄師範大學和平校區（暫定）</p>
   <p style="margin-top:12px;"><a href="en.html">English Version</a></p>
 </footer>
 
