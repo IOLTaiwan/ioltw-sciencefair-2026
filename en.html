@@ -372,6 +372,36 @@
     #backToTop.visible { opacity: 1; pointer-events: auto; }
     #backToTop:hover { transform: translateY(-2px); }
 
+    /* PAST EDITIONS */
+    .past-edition-banner {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 20px 28px; margin-bottom: 32px;
+      gap: 20px; flex-wrap: wrap;
+    }
+    .past-edition-banner-left { display: flex; align-items: center; gap: 14px; }
+    .past-edition-num { font-size: 28px; font-weight: 700; color: var(--accent); font-family: 'Noto Serif TC', serif; }
+    .past-edition-info h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .past-edition-info p { font-size: 13px; color: var(--text2); }
+    .past-edition-link {
+      font-size: 13px; font-weight: 600; color: var(--accent);
+      text-decoration: none; border: 1.5px solid var(--accent); border-radius: 8px;
+      padding: 7px 18px; white-space: nowrap; transition: background .2s;
+    }
+    .past-edition-link:hover { background: var(--accent-light); }
+    .past-works-list { display: flex; flex-direction: column; gap: 10px; }
+    .past-work-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 18px;
+    }
+    .past-work-num { font-size: 13px; font-weight: 700; color: var(--accent); min-width: 24px; padding-top: 2px; }
+    .past-work-info { flex: 1; }
+    .past-work-title { font-size: 13.5px; color: var(--text); font-weight: 600; line-height: 1.55; margin-bottom: 4px; }
+    .past-work-author { font-size: 12.5px; color: var(--text2); }
+    .past-work-title a { color: var(--accent); text-decoration: none; }
+    .past-work-title a:hover { text-decoration: underline; }
+
     @media (max-width: 680px) {
       section { padding: 60px 20px; }
       .hero { padding: 100px 20px 60px; }
@@ -391,7 +421,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">🔬 Linguistics Science Fair 2026</a>
+    <a href="#" class="nav-logo">2026 5th Taiwan Linguistics Science Fair</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#timeline">Timeline</a></li>
@@ -400,10 +430,11 @@
       <li><a href="#judging">Judging</a></li>
       <li><a href="#prizes">Prizes</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#past">Past Editions</a></li>
     </ul>
     <div class="nav-right">
       <a href="index.html" class="lang-btn">中文</a>
-      <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="nav-reg-btn">Register Now</a>
+      <a href="https://forms.gle/PzXbvui9SodbQQkL8" target="_blank" rel="noopener" class="nav-reg-btn">Register Now</a>
     </div>
     <div class="nav-mobile-right">
       <a href="index.html" class="lang-btn">中文</a>
@@ -419,7 +450,8 @@
   <a href="#judging">Judging</a>
   <a href="#prizes">Prizes</a>
   <a href="#contact">Contact</a>
-  <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="nav-reg-btn">Register Now</a>
+  <a href="#past">Past Editions</a>
+  <a href="https://forms.gle/PzXbvui9SodbQQkL8" target="_blank" rel="noopener" class="nav-reg-btn">Register Now</a>
 </div>
 
 <!-- HERO -->
@@ -430,7 +462,7 @@
     <p class="hero-sub">Sharpening thinking skills while exploring language patterns<br>Any creative, language-related topic is welcome!</p>
     <div class="hero-meta">
       <div class="hero-meta-item">📅 <strong>October 31, 2026 (Sat)</strong></div>
-      <div class="hero-meta-item">📍 <strong>National Kaohsiung Normal University (Heping Campus)</strong></div>
+      <div class="hero-meta-item">📍 <strong>National Kaohsiung Normal University, Heping Campus (tentative)</strong></div>
       <div class="hero-meta-item">🏛 <strong>IOL Taiwan × NTU Linguistics × Taiwan Linguistic Society</strong></div>
     </div>
     <div class="countdown-wrap">
@@ -458,7 +490,7 @@
       </div>
     </div>
     <div class="hero-ctas">
-      <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener" class="cta-primary">Register Now</a>
+      <a href="https://forms.gle/PzXbvui9SodbQQkL8" target="_blank" rel="noopener" class="cta-primary">Register Now</a>
       <a href="#about" class="cta-secondary">Learn More</a>
     </div>
   </div>
@@ -512,7 +544,7 @@
           <div class="tl-date">Now — September 7, 2026 (Mon), 23:59</div>
           <div class="tl-title">Registration &amp; Preliminary Fee Payment</div>
           <div class="tl-desc">Complete the online registration form and pay the preliminary round fee.<br>
-            <a href="https://forms.gle/JewE6h3j4QnprxvV9" target="_blank" rel="noopener">→ Registration Form</a>
+            <a href="https://forms.gle/PzXbvui9SodbQQkL8" target="_blank" rel="noopener">→ Registration Form</a>
           </div>
         </div>
       </div>
@@ -526,7 +558,7 @@
           <div class="tl-date">September 21, 2026 (Mon), 23:59</div>
           <div class="tl-title">Paper Submission Deadline</div>
           <div class="tl-desc">Upload your full research paper (PDF).<br>
-            <a href="https://forms.gle/dK7pkTFesyR8aph67" target="_blank" rel="noopener">→ Paper Submission Form</a>
+            <a href="https://forms.gle/j5oppqf6uN9QFHBD6" target="_blank" rel="noopener">→ Paper Submission Form</a>
           </div>
         </div>
       </div>
@@ -562,7 +594,7 @@
         <div class="tl-content">
           <div class="tl-date">October 31, 2026 (Sat)</div>
           <div class="tl-title">🎉 Finals &amp; Poster Presentation</div>
-          <div class="tl-desc">At <strong>National Kaohsiung Normal University (Heping Campus)</strong>, held alongside the Annual Conference of the Taiwan Linguistic Society. Participants present posters, give brief talks, and answer judges' questions.</div>
+          <div class="tl-desc">At <strong>National Kaohsiung Normal University, Heping Campus (tentative)</strong>, held alongside the Annual Conference of the Taiwan Linguistic Society. Participants present posters, give brief talks, and answer judges' questions.</div>
         </div>
       </div>
 
@@ -749,9 +781,89 @@
       <h4>📋 Finals Poster Requirements</h4>
       <div class="poster-row"><span class="poster-label">Size</span><span class="poster-val">Portrait A0, 118.9 cm (H) × 84.1 cm (W)</span></div>
       <div class="poster-row"><span class="poster-label">Background</span><span class="poster-val">Light colors preferred; all figures must be high resolution</span></div>
-      <div class="poster-row"><span class="poster-label">Header</span><span class="poster-val">Must include "5th Taiwan Middle School Linguistics Science Fair", paper title (40–80 chars), author name(s) (30–40 chars), school name (30–40 chars)</span></div>
+      <div class="poster-row"><span class="poster-label">Header</span><span class="poster-val">Must include "5th Taiwan Middle School Linguistics Science Fair", paper title (40–80 pt font), author name(s) (30–40 pt font), school name (30–40 pt font)</span></div>
       <div class="poster-row"><span class="poster-label">Body structure</span><span class="poster-val">Abstract → Research Objectives → Methodology → Results &amp; Discussion → Conclusion &amp; Recommendations → Brief References</span></div>
       <div class="poster-row"><span class="poster-label">Printing</span><span class="poster-val">Self-printed and brought to the venue on the day of the conference</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAST EDITIONS -->
+<section id="past" class="section-bg2">
+  <div class="container">
+    <div class="section-tag">Previous Editions</div>
+    <h2 class="section-title">Past Editions</h2>
+    <p class="section-desc">Explore outstanding works from previous Taiwan Middle School Linguistics Science Fairs</p>
+
+    <div class="past-edition-banner">
+      <div class="past-edition-banner-left">
+        <div class="past-edition-num">4th</div>
+        <div class="past-edition-info">
+          <h4>2025 – 4th Taiwan Middle School Linguistics Science Fair</h4>
+          <p>October 25, 2025 · National Taiwan Normal University, Heping Campus II</p>
+        </div>
+      </div>
+      <a href="https://sites.google.com/view/scifair-2025/首頁" target="_blank" rel="noopener" class="past-edition-link">Visit 4th Edition Website →</a>
+    </div>
+
+    <h3 style="font-size:15px;font-weight:700;color:var(--text2);margin-bottom:16px;letter-spacing:.05em;">4th Edition Outstanding Works</h3>
+    <div class="past-works-list">
+      <div class="past-work-item">
+        <div class="past-work-num">01</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1_mhQ8mfqNdmTaUCEAGGZ2LNvL84Yqf6B/view" target="_blank" rel="noopener">馬祖語否定詞研究：從語言分析、數據統計到遊戲開發 (Study of Matsu Language Negation: From Linguistic Analysis and Statistics to Game Development)</a></div>
+          <div class="past-work-author">Lyu Nai-Wei · Non-school Experimental Education (Senior High Level), Taipei</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">02</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1kylROdjGWNYbfH_lauYXxebo9a0zA9yp/view" target="_blank" rel="noopener">The impact of non-linear language on cognitive efficiency in physics reasoning</a></div>
+          <div class="past-work-author">Wang Hong-Yu · National Hsinchu Science Park Experimental High School</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">03</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1voEzGnGm7BIr9Mtmp6bPVac6Nlq1GaVL/view" target="_blank" rel="noopener">The pattern between signs: The analysis of food and medicine store names in Dihua Street</a></div>
+          <div class="past-work-author">Wang Li-De · Taipei American School</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">04</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1QR83inNUCc0s738weVuc7NQy3zGLJfva/view" target="_blank" rel="noopener">Tackling data scarcity: A practical framework for Amis-to-Mandarin machine translation</a></div>
+          <div class="past-work-author">Lin Ting-Hao · Kang Chiao American School, Hsinchu County</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">05</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1I73pGXQCJ7_X1yO0CSrTHmBllaWSPq9q/view" target="_blank" rel="noopener">Learn text vs. lived experience: Comparing human and AI understanding of language</a></div>
+          <div class="past-work-author">Chen Kai-Xi · Taichung Municipal Guangrong Junior High School</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">06</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1MmSHd_FBrKHyEIf6MS4TTV5i_BQl37hZ/view" target="_blank" rel="noopener">The pragmatic effects of degree adverbs in Mandarin Chinese: A study on perceived sincerity and emotional response</a></div>
+          <div class="past-work-author">Huang Pei-Ying & Chen Yue-Xia · Kang Chiao Xiugang & Taipei Municipal Songshan High School</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">07</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1Kg3lygvy8b35sZhVOJyJCcBZz5nhRe3J/view" target="_blank" rel="noopener">The method of loci in multimodal linguistics: Enhancing memories through spatial and gestural cues</a></div>
+          <div class="past-work-author">Guo Yu-Xuan · Kang Chiao American School, Hsinchu County</div>
+        </div>
+      </div>
+      <div class="past-work-item">
+        <div class="past-work-num">08</div>
+        <div class="past-work-info">
+          <div class="past-work-title"><a href="https://drive.google.com/file/d/1b-sASnjWJhXITOyjwH1V0Ll8mrbVs8kB/view" target="_blank" rel="noopener">"你很gay": How Taiwanese teens evaluate and reinterpret a global slang term</a></div>
+          <div class="past-work-author">Wu Bo-Shao · Taipei Private Fuxing Experimental Senior High School</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -773,7 +885,7 @@
 <!-- FOOTER -->
 <footer>
   <p>© 2026 IOL Taiwan Team × NTU Department of Linguistics × Taiwan Linguistic Society</p>
-  <p>No. 116, Heping 1st Rd., Lingya District, Kaohsiung City — National Kaohsiung Normal University (Heping Campus)</p>
+  <p>No. 116, Heping 1st Rd., Lingya District, Kaohsiung City — National Kaohsiung Normal University, Heping Campus (tentative)</p>
   <p style="margin-top:12px;"><a href="index.html">中文版</a></p>
 </footer>
 
